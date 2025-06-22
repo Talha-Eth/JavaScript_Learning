@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href = "styles/dom-with-css.css">
+  </head>
+  <body>
+    <p class ="title">Rock Paper Scissors</p>
+    <button class = "move-button"onclick="
+        winORlose('Scissor');
+        ">
+      <img src="images/scissor-emoji.png" class = "move-icon"></button>
+    <button class ="move-button" onclick="
+        winORlose('Paper');
+      ">
+    <img src="images/paper-emoji.png" class = "move-icon"></button>
+    <button class= "move-button" onclick="
+        winORlose('Rock');
+      ">
+    <img src="images/rock-emoji.png" class = "move-icon"></button>
+    <p class = "js-result result"></p>
+    <p class = "js-moves"></p>
+    <p class = "js-score score"></p>
+    <button class="reset-button" onclick="
+      score.losses = 0;
+      score.wins = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updatewins();
+      ">
+      Reset Stats
+    </button>
+    <script src = "scripts/dom-with-css-script.js">
+    </script>
+  </body>
+</html>
